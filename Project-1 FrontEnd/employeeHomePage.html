@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Reimbursement System</title>
+    <br>
+    <br>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1>Employee Home Page</h1>
+    </header>
+    <br>
+    <br>
+    <div class="container" id="fullcontainer">
+        <div class="row" id="table-row">
+            <h3>View All Reimbursements By User</h3>
+            <button id="getReimbsByUserBtn" class="btn btn-success">Get All Reimbursements</button>
+            <table class="table-hover table-bordered" id="reimbtable">
+                <thead>
+                    <tr>
+                        <th>Reimbursement ID</th>
+                        <th>Reimbursement Amount</th>
+                        <th>Reimbursement Submitted</th>
+                        <th>Reimbursement Resolved</th>
+                        <th>Reimbursement Description</th>
+                        <th>Reimbursement Author ID</th>
+                        <th>Reimbursement Resolver ID</th>
+                        <th>Reimbursement Status ID</th>
+                        <th>Reimbursement Type ID</th>
+                    </tr>
+                </thead>
+                <tbody id="reimbbody">
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Add Reimbursement</h3>
+            <form>
+                <div class="form-group row">
+                  <label for="reimbamt" class="col-sm-2 col-form-label">Amount</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="reimbamt" min="1" step="any"/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="reimbdesc" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="reimbdesc"/>
+                  </div>
+                </div>
+                <fieldset class="form-group">
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Types</legend>
+                    <div class="col-sm-10">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Food">
+                        <label class="form-check-label" for="gridRadios1">
+                          1. Food
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Lodging">
+                        <label class="form-check-label" for="gridRadios2">
+                          2. Lodging
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Travel">
+                        <label class="form-check-label" for="gridRadios3">
+                          3. Travel
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Other">
+                        <label class="form-check-label" for="gridRadios3">
+                          4. Other
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="form-group row">
+                  <div class="col-sm-2">Status</div>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck1">
+                      <label class="form-check-label" for="gridCheck1">
+                        1. Pending
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                    <button id="addReimbBtn" type="submit" class="btn btn-primary">Submit</button>
+                  </div>"
+                </div>
+              </form>
+              <button id="logoutBtn" class="btn btn-primary">Logout</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="employeeHomePage.js"></script>
+</body>
+</html>
